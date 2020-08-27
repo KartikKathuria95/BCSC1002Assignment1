@@ -7,13 +7,13 @@
 package definitions;
 
 public class Library {
-    private Book[] storeAllBooksThatAreCurrentlyAvailable;
+    private Book[] booksThatAreCurrentlyAvailable;
 
-    public Book[] getStoreAllBooksThatAreCurrentlyAvailable() {
-        return storeAllBooksThatAreCurrentlyAvailable;
+    public Book[] getBooksThatAreCurrentlyAvailable() {
+        return booksThatAreCurrentlyAvailable;
     }
 
-    public void setStoreAllBooksThatAreCurrentlyAvailable(Book[] storeAllBooksThatAreCurrentlyAvailable) {
-        this.storeAllBooksThatAreCurrentlyAvailable = storeAllBooksThatAreCurrentlyAvailable;
+    public void setBooksThatAreCurrentlyAvailable(Book[] booksThatAreCurrentlyAvailable) {
+        this.booksThatAreCurrentlyAvailable = booksThatAreCurrentlyAvailable;
     }
 }

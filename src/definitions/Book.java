@@ -11,6 +11,18 @@ public class Book {
     private String authorName;
     private String thirteenDigitIsbnNumber;
 
+    public Book() {
+        bookName = "Object Oriented Programming";
+        authorName = "Herbert Schildt";
+        thirteenDigitIsbnNumber = "9548665450580";
+    }
+
+    public Book(String bookName, String  authorName, String thirteenDigitIsbnNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
+    }
+
     public String getBookName() {
         return bookName;
     }
