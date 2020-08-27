@@ -10,4 +10,7 @@ public class Student {
     private String storeFirstNameOfStudent;
     private String storeMiddleNameOfStudent;
     private String storeLastNameOfStudent;
+    private long storeUniversityRollNumberStudent;
+    private int storeNumberOfBooksIssuedByStudent;
+    private Book[] storeAllNamesBooksIssuedByStudent;
 }
