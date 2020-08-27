@@ -8,4 +8,12 @@ package definitions;
 
 public class Library {
     private Book[] storeAllBooksThatAreCurrentlyAvailable;
+
+    public Book[] getStoreAllBooksThatAreCurrentlyAvailable() {
+        return storeAllBooksThatAreCurrentlyAvailable;
+    }
+
+    public void setStoreAllBooksThatAreCurrentlyAvailable(Book[] storeAllBooksThatAreCurrentlyAvailable) {
+        this.storeAllBooksThatAreCurrentlyAvailable = storeAllBooksThatAreCurrentlyAvailable;
+    }
 }
