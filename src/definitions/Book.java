@@ -9,5 +9,5 @@ package definitions;
 public class Book {
     private String storeTheNumberOfBooks;
     private String storeNameAuthorBook;
-    private String store13digitISBNumberOfTheBook;
+    private String store13digitISBNumbeBook;
 }
