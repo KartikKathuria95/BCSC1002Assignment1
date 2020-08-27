@@ -7,4 +7,7 @@
 package definitions;
 
 public class Student {
+    private String storeFirstNameOfStudent;
+    private String storeMiddleNameOfStudent;
+    private String storeLastNameOfStudent;
 }
