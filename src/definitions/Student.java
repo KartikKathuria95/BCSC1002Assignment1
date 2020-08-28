@@ -85,13 +85,12 @@ public class Student {
 
     public String toString() {
         return "Student{" +
-                "firstNameOfStudent='" + firstNameOfStudent + '\'' +
-                ", middleNameOfStudent='" + middleNameOfStudent + '\'' +
-                ", lastNameOfStudent='" + lastNameOfStudent + '\'' +
-                ", universityRollNumberOfStudent=" + universityRollNumberOfStudent +
-                ", numberOfBooksIssuedByStudent=" + numberOfBooksIssuedByStudent +
+                "firstNameOfStudent='" + getFirstNameOfStudent() + '\'' +
+                ", middleNameOfStudent='" + getMiddleNameOfStudent() + '\'' +
+                ", lastNameOfStudent='" + getLastNameOfStudent() + '\'' +
+                ", universityRollNumberOfStudent=" + getUniversityRollNumberOfStudent() +
+                ", numberOfBooksIssuedByStudent=" + getNumberOfBooksIssuedByStudent() +
                 ", AllNamesOfBooksIssuedByStudent=" + Arrays.toString(AllNamesOfBooksIssuedByStudent) +
                 '}';
     }
-
 }
