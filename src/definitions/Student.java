@@ -83,7 +83,6 @@ public class Student {
         return Objects.hash(getFirstNameOfStudent(), getMiddleNameOfStudent(), getLastNameOfStudent(), getUniversityRollNumberOfStudent(), getNumberOfBooksIssuedByStudent());
         }
 
-    @Override
     public String toString() {
         return "Student{" +
                 "firstNameOfStudent='" + firstNameOfStudent + '\'' +
