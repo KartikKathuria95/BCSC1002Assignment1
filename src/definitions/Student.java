@@ -80,10 +80,8 @@ public class Student {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(firstNameOfStudent, middleNameOfStudent, lastNameOfStudent, universityRollNumberOfStudent, numberOfBooksIssuedByStudent);
-        result = 31 * result + Arrays.hashCode(AllNamesOfBooksIssuedByStudent);
-        return result;
-    }
+        return Objects.hash(getFirstNameOfStudent(), getMiddleNameOfStudent(), getLastNameOfStudent(), getUniversityRollNumberOfStudent(), getNumberOfBooksIssuedByStudent());
+        }
 
     @Override
     public String toString() {
