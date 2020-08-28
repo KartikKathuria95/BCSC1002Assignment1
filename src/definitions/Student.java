@@ -6,6 +6,9 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
     private String firstNameOfStudent;
     private String middleNameOfStudent;
@@ -60,5 +63,37 @@ public class Student {
 
     public void setAllNamesOfBooksIssuedByStudent(Book[] allNamesOfBooksIssuedByStudent) {
         AllNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return universityRollNumberOfStudent == student.universityRollNumberOfStudent &&
+                numberOfBooksIssuedByStudent == student.numberOfBooksIssuedByStudent &&
+                Objects.equals(firstNameOfStudent, student.firstNameOfStudent) &&
+                Objects.equals(middleNameOfStudent, student.middleNameOfStudent) &&
+                Objects.equals(lastNameOfStudent, student.lastNameOfStudent) &&
+                Arrays.equals(AllNamesOfBooksIssuedByStudent, student.AllNamesOfBooksIssuedByStudent);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(firstNameOfStudent, middleNameOfStudent, lastNameOfStudent, universityRollNumberOfStudent, numberOfBooksIssuedByStudent);
+        result = 31 * result + Arrays.hashCode(AllNamesOfBooksIssuedByStudent);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstNameOfStudent='" + firstNameOfStudent + '\'' +
+                ", middleNameOfStudent='" + middleNameOfStudent + '\'' +
+                ", lastNameOfStudent='" + lastNameOfStudent + '\'' +
+                ", universityRollNumberOfStudent=" + universityRollNumberOfStudent +
+                ", numberOfBooksIssuedByStudent=" + numberOfBooksIssuedByStudent +
+                ", AllNamesOfBooksIssuedByStudent=" + Arrays.toString(AllNamesOfBooksIssuedByStudent) +
+                '}';
     }
 }

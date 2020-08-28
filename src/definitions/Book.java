@@ -50,8 +50,18 @@ public class Book {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(bookName, book.bookName) &&
+                Objects.equals(authorName, book.authorName) &&
+                Objects.equals(thirteenDigitIsbnNumber, book.thirteenDigitIsbnNumber);
+    }
+
+    @Override
     public int hashCode() {
-        return Objects.hash(getBookName(), getAuthorName(), getThirteenDigitIsbnNumber());
+        return Objects.hash(bookName, authorName, thirteenDigitIsbnNumber);
     }
 
     @Override
@@ -61,15 +71,5 @@ public class Book {
                 ", authorName='" + authorName + '\'' +
                 ", thirteenDigitIsbnNumber='" + thirteenDigitIsbnNumber + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return Objects.equals(bookName, book.bookName) &&
-                Objects.equals(authorName, book.authorName) &&
-                Objects.equals(thirteenDigitIsbnNumber, book.thirteenDigitIsbnNumber);
     }
 }
