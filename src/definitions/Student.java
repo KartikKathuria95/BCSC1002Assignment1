@@ -81,7 +81,7 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(getFirstNameOfStudent(), getMiddleNameOfStudent(), getLastNameOfStudent(), getUniversityRollNumberOfStudent(), getNumberOfBooksIssuedByStudent());
-        }
+    }
 
     public String toString() {
         return "Student{" +
