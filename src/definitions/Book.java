@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Objects;
+
 public class Book {
     private String bookName;
     private String authorName;
@@ -14,10 +16,10 @@ public class Book {
     public Book() {
         bookName = "Object Oriented Programming";
         authorName = "Herbert Schildt";
-        thirteenDigitIsbnNumber = "9548665450580";
+        thirteenDigitIsbnNumber = "9458665450580";
     }
 
-    public Book(String bookName, String  authorName, String thirteenDigitIsbnNumber) {
+    public Book(String bookName, String authorName, String thirteenDigitIsbnNumber) {
         this.bookName = bookName;
         this.authorName = authorName;
         this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
@@ -46,5 +48,28 @@ public class Book {
     public void setThirteenDigitIsbnNumber(String thirteenDigitIsbnNumber) {
         this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
     }
-}
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBookName(), getAuthorName(), getThirteenDigitIsbnNumber());
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", thirteenDigitIsbnNumber='" + thirteenDigitIsbnNumber + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(bookName, book.bookName) &&
+                Objects.equals(authorName, book.authorName) &&
+                Objects.equals(thirteenDigitIsbnNumber, book.thirteenDigitIsbnNumber);
+    }
+}
