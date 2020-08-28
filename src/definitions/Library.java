@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
     private Book[] allBooksThatAreCurrentlyAvailable;
 
@@ -28,5 +30,22 @@ public class Library {
         this.allBooksThatAreCurrentlyAvailable = allBooksThatAreCurrentlyAvailable;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Library library = (Library) o;
+        return Arrays.equals(allBooksThatAreCurrentlyAvailable, library.allBooksThatAreCurrentlyAvailable);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(allBooksThatAreCurrentlyAvailable);
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(allBooksThatAreCurrentlyAvailable);
+    }
 }
 
