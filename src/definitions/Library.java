@@ -47,5 +47,25 @@ public class Library {
     public String toString() {
         return Arrays.toString(allBooksThatAreCurrentlyAvailable);
     }
+
+    /**
+     * This method issued a Book to the Library.
+     *
+     * @param bookName The name of the Book to be issued.
+     */
+
+    public void issuedBook(String bookName) {
+        System.out.println(bookName + " book is issued for you.");
+    }
+
+    public void returnedBook(String bookName) {
+        System.out.println(" Thank You for returning the book " + bookName + ".");
+    }
+
+    public void listInventory() {
+        for (Book book : allBooksThatAreCurrentlyAvailable) {
+            System.out.println(book);
+        }
+    }
 }
 
