@@ -62,7 +62,7 @@ public class Library {
         System.out.println(" Thank You for returning the book " + bookName + ".");
     }
 
-    public void listInventory() {
+    public void showAllIssuedBooks () {
         for (Book book : allBooksThatAreCurrentlyAvailable) {
             System.out.println(book);
         }
