@@ -17,5 +17,7 @@ public class FrontDesk {
         System.out.println("2. Return a previously issues book for me.");
         System.out.println("3. Show me all my issues books.");
         System.out.println("4. Exit.");
+        System.out.println("Enter Your Choice(1..4): ");
+
     }
 }
