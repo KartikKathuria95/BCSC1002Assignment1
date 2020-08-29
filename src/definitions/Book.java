@@ -13,7 +13,7 @@ public class Book {
     private String authorName;
     private String thirteenDigitIsbnNumber;
 
-    public Book(String s) {
+    public Book() {
         bookName = "Object Oriented Programming";
         authorName = "Herbert Schildt";
         thirteenDigitIsbnNumber = "9458665450580";
