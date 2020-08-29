@@ -20,9 +20,9 @@ public class Book {
     }
 
     public Book(String bookName, String authorName, String thirteenDigitIsbnNumber) {
-        this.bookName = bookName;
-        this.authorName = authorName;
-        this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
+        this.bookName = "no";
+        this.authorName = "no";
+        this.thirteenDigitIsbnNumber = "no";
     }
 
     public String getBookName() {
@@ -61,7 +61,7 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getBookName(),getAuthorName(), getThirteenDigitIsbnNumber());
+        return Objects.hash(getBookName(), getAuthorName(), getThirteenDigitIsbnNumber());
     }
 
     public String toString() {
