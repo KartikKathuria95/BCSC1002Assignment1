@@ -48,6 +48,7 @@ public class FrontDesk {
                     break;
                 case EXIT:
                     System.out.println("EXIT");
+                    break;
                 default:
                     System.out.println("WRONG CHOICE");
             }
