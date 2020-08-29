@@ -20,9 +20,9 @@ public class Book {
     }
 
     public Book(String bookName, String authorName, String thirteenDigitIsbnNumber) {
-        this.bookName = "no";
-        this.authorName = "no";
-        this.thirteenDigitIsbnNumber = "no";
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
     }
 
     public String getBookName() {
