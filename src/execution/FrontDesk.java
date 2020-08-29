@@ -8,6 +8,8 @@ package execution;
 
 import definitions.Student;
 
+import java.util.Scanner;
+
 public class FrontDesk {
     public static void main(String[] args) {
         Student StoreDetailsOfStudentCurrentlyInteractingWithSystem = new Student();
