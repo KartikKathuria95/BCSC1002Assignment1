@@ -7,10 +7,7 @@
 package execution;
 
 import definitions.Library;
-import definitions.Student;
 
-import java.security.PrivateKey;
-import java.util.PrimitiveIterator;
 import java.util.Scanner;
 
 public class FrontDesk {
@@ -23,7 +20,7 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
-        Library myLibrary  = new Library();
+        Library myLibrary = new Library();
         do {
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-\n");
             System.out.println("How may I help you today?");
