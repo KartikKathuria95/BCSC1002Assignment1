@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class FrontDesk {
     public static void main(String[] args) {
-        Student StoreDetailsOfStudentCurrentlyInteractingWithSystem = new Student();
+        Scanner scanner = new Scanner(System.in);
         System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-\n");
         System.out.println("How may I help you today?");
         System.out.println("1. Issue a new book for me.");
