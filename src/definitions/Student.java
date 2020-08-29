@@ -1,5 +1,4 @@
-/*  Created
- by IntelliJ IDEA.
+/*  Created by IntelliJ IDEA.
  *  User: Kartik Kathuria
  *  Date: 22/08/20
  *  Time: 3:50 PM
