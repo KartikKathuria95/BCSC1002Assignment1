@@ -14,7 +14,7 @@ public class Book {
     private String thirteenDigitIsbnNumber;
 
     public Book(String bookName) {
-        bookName = "Object Oriented Programming";
+        this.bookName = "Object Oriented Programming";
         authorName = "Herbert Schildt";
         thirteenDigitIsbnNumber = "9458665450580";
     }
