@@ -54,9 +54,7 @@ public class Student {
         Student student = (Student) o;
         return universityRollNumberOfStudent == student.universityRollNumberOfStudent &&
                 numberOfBooksIssuedByStudent == student.numberOfBooksIssuedByStudent &&
-                Objects.equals(firstNameOfStudent, student.firstNameOfStudent) &&
-                Objects.equals(middleNameOfStudent, student.middleNameOfStudent) &&
-                Objects.equals(lastNameOfStudent, student.lastNameOfStudent) &&
+                Arrays.equals(nameOfStudentFormatFirstMiddleLast, student.nameOfStudentFormatFirstMiddleLast) &&
                 Arrays.equals(AllNamesOfBooksIssuedByStudent, student.AllNamesOfBooksIssuedByStudent);
     }
 
