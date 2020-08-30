@@ -13,6 +13,10 @@ public class Book {
     private String authorName;
     private String thirteenDigitIsbnNumber;
 
+    public Book() {
+
+    }
+
     public Book(String bookName) {
         this.bookName = "Object Oriented Programming";
         authorName = "Herbert Schildt";
