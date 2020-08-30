@@ -47,11 +47,11 @@ public class Student {
     }
 
     public Book[] getAllNamesOfBooksIssuedByStudent() {
-        return AllNamesOfBooksIssuedByStudent;
+        return allNamesOfBooksIssuedByStudent;
     }
 
     public void setAllNamesOfBooksIssuedByStudent(Book[] allNamesOfBooksIssuedByStudent) {
-        AllNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
+        allNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
     }
 
     @Override
@@ -62,14 +62,14 @@ public class Student {
         return universityRollNumberOfStudent == student.universityRollNumberOfStudent &&
                 numberOfBooksIssuedByStudent == student.numberOfBooksIssuedByStudent &&
                 Arrays.equals(nameOfStudentFormatFirstMiddleLast, student.nameOfStudentFormatFirstMiddleLast) &&
-                Arrays.equals(AllNamesOfBooksIssuedByStudent, student.AllNamesOfBooksIssuedByStudent);
+                Arrays.equals(allNamesOfBooksIssuedByStudent, student.allNamesOfBooksIssuedByStudent);
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(universityRollNumberOfStudent, numberOfBooksIssuedByStudent);
         result = 31 * result + Arrays.hashCode(nameOfStudentFormatFirstMiddleLast);
-        result = 31 * result + Arrays.hashCode(AllNamesOfBooksIssuedByStudent);
+        result = 31 * result + Arrays.hashCode(allNamesOfBooksIssuedByStudent);
         return result;
     }
 
@@ -79,7 +79,7 @@ public class Student {
                 "nameOfStudentFormatFirstMiddleLast=" + Arrays.toString(nameOfStudentFormatFirstMiddleLast) +
                 ", universityRollNumberOfStudent=" + universityRollNumberOfStudent +
                 ", numberOfBooksIssuedByStudent=" + numberOfBooksIssuedByStudent +
-                ", AllNamesOfBooksIssuedByStudent=" + Arrays.toString(AllNamesOfBooksIssuedByStudent) +
+                ", AllNamesOfBooksIssuedByStudent=" + Arrays.toString(allNamesOfBooksIssuedByStudent) +
                 '}';
     }
 }
