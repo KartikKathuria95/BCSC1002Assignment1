@@ -14,7 +14,7 @@ public class Library {
     public Library() {
         this.allBooksThatAreCurrentlyAvailable = new Book[20];
         for (int index = 0; index < allBooksThatAreCurrentlyAvailable.length; index++) {
-            allBooksThatAreCurrentlyAvailable[index] = new Book("Book " + (index + 1));
+            allBooksThatAreCurrentlyAvailable[index] = new Book("Books " + (index + 1));
         }
     }
 
@@ -68,4 +68,3 @@ public class Library {
         }
     }
 }
-
