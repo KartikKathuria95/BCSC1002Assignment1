@@ -19,7 +19,7 @@ public class FrontDesk {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int studentInput;
+        int userInput;
         Library myLibrary = new Library();
         do {
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-\n");
@@ -29,8 +29,9 @@ public class FrontDesk {
             System.out.println("3. Show me all my issues books.");
             System.out.println("4. Exit.");
             System.out.println("Enter Your Choice(1..4): ");
-            studentInput = scanner.nextInt();
-            switch (studentInput) {
+            userInput = scanner.nextInt();
+
+            switch (userInput) {
                 case ISSUE_NEW_BOOK:
                     System.out.println("Enter the Name of the book that you want to issue: ");
                     scanner.nextLine();
@@ -50,9 +51,9 @@ public class FrontDesk {
                     System.out.println("EXIT");
                     break;
                 default:
-                    System.out.println("WRONG CHOICE");
+                    System.out.println("WRONG INPUT");
             }
-        } while (studentInput != EXIT);
+        } while (userInput != EXIT);
         scanner.close();
     }
 }
