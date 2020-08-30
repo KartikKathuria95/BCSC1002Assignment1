@@ -13,7 +13,14 @@ public class Student {
     private String[] nameOfStudentFormatFirstMiddleLast;
     private long universityRollNumberOfStudent;
     private int numberOfBooksIssuedByStudent;
-    private Book[] AllNamesOfBooksIssuedByStudent;
+    private Book[] allNamesOfBooksIssuedByStudent;
+
+    public Student(String nameOfStudent, long universityRollNumber, int numberOfBooksIssued) {
+        this.nameOfStudentFormatFirstMiddleLast = nameOfStudent.split(" ");
+        this.universityRollNumberOfStudent = universityRollNumber;
+        this.numberOfBooksIssuedByStudent = numberOfBooksIssued;
+        this.allNamesOfBooksIssuedByStudent = new Book[numberOfBooksIssued];
+    }
 
     public String[] getNameOfStudentFormatFirstMiddleLast() {
         return nameOfStudentFormatFirstMiddleLast;
