@@ -10,35 +10,17 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
-    private String firstNameOfStudent;
-    private String middleNameOfStudent;
-    private String lastNameOfStudent;
+    private String[] nameOfStudentFormatFirstMiddleLast;
     private long universityRollNumberOfStudent;
     private int numberOfBooksIssuedByStudent;
     private Book[] AllNamesOfBooksIssuedByStudent;
 
-    public String getFirstNameOfStudent() {
-        return firstNameOfStudent;
+    public String[] getNameOfStudentFormatFirstMiddleLast() {
+        return nameOfStudentFormatFirstMiddleLast;
     }
 
-    public void setFirstNameOfStudent(String firstNameOfStudent) {
-        this.firstNameOfStudent = firstNameOfStudent;
-    }
-
-    public String getMiddleNameOfStudent() {
-        return middleNameOfStudent;
-    }
-
-    public void setMiddleNameOfStudent(String middleNameOfStudent) {
-        this.middleNameOfStudent = middleNameOfStudent;
-    }
-
-    public String getLastNameOfStudent() {
-        return lastNameOfStudent;
-    }
-
-    public void setLastNameOfStudent(String lastNameOfStudent) {
-        this.lastNameOfStudent = lastNameOfStudent;
+    public void setNameOfStudentFormatFirstMiddleLast(String[] nameOfStudentFormatFirstMiddleLast) {
+        this.nameOfStudentFormatFirstMiddleLast = nameOfStudentFormatFirstMiddleLast;
     }
 
     public long getUniversityRollNumberOfStudent() {
@@ -80,7 +62,10 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFirstNameOfStudent(), getMiddleNameOfStudent(), getLastNameOfStudent(), getUniversityRollNumberOfStudent(), getNumberOfBooksIssuedByStudent());
+        int result = Objects.hash(universityRollNumberOfStudent, numberOfBooksIssuedByStudent);
+        result = 31 * result + Arrays.hashCode(nameOfStudentFormatFirstMiddleLast);
+        result = 31 * result + Arrays.hashCode(AllNamesOfBooksIssuedByStudent);
+        return result;
     }
 
     public String toString() {
